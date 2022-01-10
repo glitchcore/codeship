@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Codeship</title>
+        <style type="text/css">
+            html, body {
+                width:  100%;
+                height: 100%;
+                margin: 0;
+            }
+            #editor { 
+                height: 80%;
+                widows: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="editor">
+x = 1
+</div>
+        <button onclick="upload_code();">Upload</button>
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            let editor = ace.edit("editor");
+
+            function upload_code() {
+                let code = editor.getValue();
+                console.log("code:", code);
+            }
+        </script>
+    </body>
+</html>
